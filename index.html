@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+<body>
+    <!-- 头部导航栏 -->
+    <header>
+        <nav class="navbar navbar-expand-md bg-light navbar-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo"> Chen's
+                    <span>BookStore</span></a>
+                <!-- 汉堡菜单按钮 -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 导航栏按钮 -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i>主页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="store.html"><i class="fa-solid fa-store"></i>书籍商店</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login.html" class="loginIcon nav-link"><i class="fa-solid fa-user"></i>登录/注册</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cart.html" class="loginIcon nav-link"><i class="fa-solid fa-cart-shopping"></i>购物车</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主体部分 -->
+    <main>
+        <!-- 轮播图 -->
+        <div class="container mt-3">
+            <!-- 轮播 -->
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- 指示符 -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- 轮播图片 -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/banner1.png" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/banner2.png" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/banner3.png" class="d-block" style="width:100%">
+                    </div>
+                </div>
+
+                <!-- 左右切换按钮 -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+        <!-- 热销经典部分 -->
+        <div class="container mt-5 hotSale">
+            <h3 class="float-start">热销经典</h3>
+            <a href="#" class="float-end mt-2 text-primary seeMore">查看更多></a>
+            <div class="clean"></div>
+            <hr>
+            <div class="row SaleCard">
+                <div class="col-lg-2 col-md-6 col-6">
+                    <img src="images/Book1_1.jpg" class="card-img-top w-80" alt="...">
+                    <a href="#" class="bookName">史记</a>
+                    <p class="mt-1">(西汉)司马迁 著</p>
+                    <p class="mt-1 text-danger">¥283.10起</p>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <img src="images/Book2_1.jpg" class="card-img-top w-80" alt="...">
+                    <a href="#" class="bookName">成为雍正</a>
+                    <p class="mt-1">李正 著</p>
+                    <p class="mt-1 text-danger">¥76.40起</p>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <img src="images/Book3_1.jpg" class="card-img-top w-80" alt="...">
+                    <a href="#" class="bookName">繁花</a>
+                    <p class="mt-1">金宇澄 著</p>
+                    <p class="mt-1 text-danger">¥68.00起</p>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <img src="images/Book4_1.jpg" class="card-img-top w-80" alt="...">
+                    <a href="#" class="bookName">每个人都了不起</a>
+                    <p class="mt-1">梁永安 著</p>
+                    <p class="mt-1 text-danger">¥56.80起</p>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <img src="images/Book5_1.jpg" class="card-img-top w-80" alt="...">
+                    <a href="#" class="bookName">阿勒泰的角落</a>
+                    <p class="mt-1">李娟 著</p>
+                    <p class="mt-1 text-danger">¥40.70起</p>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <img src="images/Book6_1.jpg" class="card-img-top w-80" alt="...">
+                    <a href="#" class="bookName">三体</a>
+                    <p class="mt-1">刘慈欣 著</p>
+                    <p class="mt-1 text-danger">¥91.10起</p>
+                </div>
+            </div>
+        </div>
+    <!-- 秒杀专区 -->
+        <div class="container mt-5">
+            <h3 class="float-start">秒杀专区</h3>
+            <a href="#" class="float-end mt-2 text-primary seeMore">查看更多></a>
+            <div class="clean"></div>
+            <hr>
+            <div class="row SaleCard">
+                <div class="contdown col-lg-2 col-md-6 col-6">
+                    <p class="next text-success" id="next">今天是xxxx年x月xx日</p>
+                    <p class="title mt-1 text-success">距离活动结束</p>
+                    <p class="clock mt-1 text-success">
+                    <span id="hour">xx</span>
+                    <i>:</i>
+                    <span id="minutes">xx</span>
+                    <i>:</i>
+                    <span id="second">xx</span>
+                    </p>
+                    <p class="tips mt-1 text-success" >20:00场</p>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <img src="images/et2.webp" class="card-img-top w-80" alt="...">
+                    <a href="#" class="bookName">威尔和小松鼠</a>
+                    <p class="mt-1">李正 著</p>
+                    <p class="mt-1 text-danger seckillPrice">¥9.9<span class="text-muted">¥12.40</span></p>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <img src="images/et3.webp" class="card-img-top w-80" alt="...">
+                    <a href="#" class="bookName">安徒生童话</a>
+                    <p class="mt-1">金宇澄 著</p>
+                    <p class="mt-1 text-danger seckillPrice">¥59.9<span class="text-muted">¥75.9</span></p>
+
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <img src="images/et4.webp" class="card-img-top w-80" alt="...">
+                    <a href="#" class="bookName">阿衰日记</a>
+                    <p class="mt-1">梁永安 著</p>
+                    <p class="mt-1 text-danger seckillPrice">¥29.9<span class="text-muted">¥36.90</span></p>
+
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <img src="images/et5.jpg" class="card-img-top w-80" alt="...">
+                    <a href="#" class="bookName">爆笑校园</a>
+                    <p class="mt-1">李娟 著</p>
+                    <p class="mt-1 text-danger seckillPrice">¥19.9<span class="text-muted">¥25.40</span></p>
+
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <img src="images/et7.jpg" class="card-img-top w-80" alt="...">
+                    <a href="#" class="bookName">性学观止:插图第6版</a>
+                    <p class="mt-1">贺兰特·凯查杜里安 著</p>
+                    <p class="mt-1 text-danger seckillPrice">¥99.9<span class="text-muted">¥112.40</span></p>
+
+                </div>
+            </div>
+            <div class="container mt-5 recommand">
+                <h3>为你推荐</h3>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-6 mt-3">
+                        <img src="images/booklongpic1.jpeg" alt="" class="w-100">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6 mt-3">
+                        <img src="images/booklongpic2.jpeg" alt="" class="w-100">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6 mt-3">
+                        <img src="images/booklongpic3.png" alt="" class="w-100">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-6 mt-3">
+                        <img src="images/booklongpic4.jpeg" alt="" class="w-100">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-4 col-md-4 col-12 mt-3">
+                        <img src="images/booklongpic5.jpeg" alt="" class="w-100">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-3">
+                        <img src="images/booklongpic6.jpg" alt="" class="w-100">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 mt-3">
+                        <img src="images/booklongpic7.png" alt="" class="w-100">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- 底部Footer -->
+    <footer class="site-footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-10 me-auto mb-4">
+                    <h3 class="navbar-brand-text" href="#">Chen's
+                        <span>BookStore</span></a>
+                        <p class="copyright-text mt-lg-5 mb-4 mb-lg-0">版权所有 &copy; <a href="index.html"
+                                class="authot">2024 Chen's BookStore</a></p>
+                        <br>
+                        <p class="copyright-text">作者 <a href="#" target="_blank" class="authot">陈伟东,陈瑞祥,陈泽宇</a></p>
+                </div>
+
+                <div class="col-lg-5 col-8">
+                    <h5 class="text-white mb-3">链接</h5>
+
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item"><a href="index.html" class="footer-menu-link">主页</a></li>
+
+                        <li class="footer-menu-item"><a href="store.html" class="footer-menu-link">书籍商店</a></li>
+
+                        <li class="footer-menu-item"><a href="login.html" class="footer-menu-link">登录/注册</a></li>
+
+                        <li class="footer-menu-item"><a href="cart.html" class="footer-menu-link">购物车</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-4">
+                    <h5 class="text-white mb-3">社交媒体</h5>
+                    <ul class="social-icon">
+                        <li><a href="#" class="social-icon-link"><i class="fa-brands fa-youtube"></i></i></a></li>
+                        <li><a href="#" class="social-icon-link"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="#" class="social-icon-link"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" class="social-icon-link"><i class="fa-brands fa-skype"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/djs.js"></script>
+
+</html>

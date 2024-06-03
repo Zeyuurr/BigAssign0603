@@ -1,0 +1,680 @@
+/* 所有元素 */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* 定义字体 */
+@font-face {
+    font-family: myFont;
+    src: url(../fonts/HarmonyOS_Sans_Regular.ttf);
+}
+
+body,
+html {
+    font-family: myFont;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    /* 能让footer贴到底部*/
+}
+
+
+/* 清除浮动 */
+.clean {
+    clear: both;
+}
+
+/* 导航栏部分 */
+.navbar-brand img {
+    width: 80px;
+}
+
+.navbar .navbar-brand {
+    color: #ff4400 !important;
+    font-weight: bold;
+}
+
+.navbar .navbar-brand span {
+    color: black;
+}
+
+.navbar .navbar-brand:hover span {
+    color: #ff4400;
+}
+
+.collapse {
+    float: right;
+}
+
+.navbar-nav {
+    margin-right: 50px;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    position: relative;
+    /* 设置定位上下文 */
+    overflow: hidden;
+    /* 防止伪元素溢出 */
+    display: inline-block;
+    /* 确保可以应用宽度和高度 */
+}
+
+.nav-item a:hover {
+    color: #ff4400 !important;
+}
+
+
+/* ::after选定元素之后插入的内容 */
+.nav-link::after {
+    content: '';
+    /* 伪元素的内容为空 */
+    position: absolute;
+    /* 绝对定位 */
+    bottom: 0;
+    /* 位于元素底部 */
+    left: 0;
+    /* 从左侧开始 */
+    width: 100%;
+    /* 宽度与父元素相同 */
+    height: 2px;
+    /* 下划线的高度 */
+    background-color: #ff4400;
+    /* 下划线的颜色，可以根据需要调整 */
+    transform: scaleY(0);
+    /* 垂直缩放比例设置为0，换句话说初始状态不显示 */
+    transform-origin: bottom;
+    /* 这行代码指定了变换的原点在元素的底部。这意味着元素会以底部为基准进行变换，而不是默认的中心点。 */
+    /* 变形的基点在底部 transform-Origin属性允许您更改转换元素的位置。*/
+    /* transform-origin只有在使用了transform后才奏效； */
+    transition: transform 0.3s ease-in-out;
+    /* 过渡动画 时长*/
+}
+
+.nav-link:hover::after {
+    transform: scaleY(1);
+    /* 悬停时显示下划线 */
+    color: #ff4400;
+}
+
+.nav-link.active {
+    color: #ff4400 !important;
+}
+
+.nav-link.active::after {
+    transform: scaleY(1);
+}
+
+/* 导航栏结束 */
+
+/* 底部部分 */
+.site-footer {
+    background-color: black;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.navbar-brand-text {
+    font-size: 1.25rem;
+    color: #ff4400;
+    font-weight: bold;
+}
+
+.footer-menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-menu-item {
+    padding: 0 10px;
+    display: inline-block;
+}
+
+.footer-menu-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-menu-link:hover {
+    color: #ff4400;
+}
+
+.social-icon {
+    list-style: none;
+    padding-left: 0;
+}
+
+.social-icon-link {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.social-icon-link:hover {
+    color: #ff4400;
+}
+
+.authot {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icon-link {
+    float: left;
+    margin-right: 10px;
+}
+
+/* 底部结束 */
+/* index.html  开始*/
+/* 热销经典部分开始 */
+.hotSale a {
+    text-decoration: none;
+    color: black;
+}
+
+.SaleCard {
+    text-align: center;
+}
+
+.SaleCard a {
+    color: black;
+    text-decoration: none;
+}
+
+.SaleCard p {
+    margin: 0;
+}
+
+.bookName {
+    font-weight: bold;
+}
+
+.seeMore {
+    color: #ff4400 !important;
+    font-weight: bold;
+}
+
+.contdown {
+    background: url(../images/ms.png) no-repeat center;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+.seckillPrice span {
+    margin-left: 10px;
+    text-decoration: line-through;
+}
+
+@media (max-width: 576px) {
+    .next {
+        margin-top: 50px !important;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .next {
+        margin-top: 50px !important;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .next {
+        margin-top: 30px !important;
+    }
+}
+
+@media (min-width: 1201px) {
+    .next {
+        margin-top: 40px !important;
+    }
+}
+
+/* 热销经典部分结束 */
+/* index.html结束 */
+/* login.html 开始*/
+.login-page{
+    background: url(../images/loginbg.jpg ) no-repeat center center fixed;
+    background-size: cover;
+}
+.login-box {
+    padding: 40px;
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: white;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    transition: .5s;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+}
+
+.login-box .user-box input:focus,
+.login-box .user-box input:valid {
+    border-bottom: 2px solid #ff4400;
+}
+
+.login-box button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #ff4400;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.register-link a {
+    color: #ff4400;
+    text-decoration: none;
+}
+
+/* login.html结束 */
+/* register.html开始 */
+.register-box {
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    /* 半透明黑色背景 */
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    /* 添加阴影效果 */
+    border-radius: 10px;
+    /* 圆角边框 */
+    color: #fff;
+    /* 文字颜色为白色 */
+}
+
+.register-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: white;
+    text-align: center;
+    /* 标题居中显示 */
+}
+
+.register-box .user-box {
+    position: relative;
+    margin-bottom: 20px;
+    /* 每个输入框下方留有空间 */
+}
+
+.register-box .user-box input {
+    width: 100%;
+    /* 输入框宽度100% */
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    /* 底部白色边框 */
+    outline: none;
+    color: white;
+    padding: 10px 0;
+    /* 填充，使文本更容易阅读 */
+    font-size: 16px;
+    /* 文字大小 */
+    transition: border-color 0.5s;
+    /* 过渡效果 */
+}
+
+.register-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    /* 确保点击事件可以穿透label触发input */
+    transition: 0.5s;
+    /* 过渡效果 */
+}
+
+.register-box .user-box input:focus~label,
+.register-box .user-box input:valid~label {
+    top: -20px;
+    /* 输入时标签上移 */
+    font-size: 12px;
+    /* 字体变小 */
+}
+
+.register-box .user-box input:focus,
+.register-box .user-box input:valid {
+    border-bottom: 2px solid #ff4400;
+    /* 输入时底边变粗且颜色变化 */
+}
+
+.register-box button {
+    background: #ff4400;
+    /* 橙色背景 */
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    /* 按钮宽度100% */
+    margin-top: 20px;
+    /* 按钮与输入框间隔 */
+}
+
+/* register.html结束 */
+/* store.html开始 */
+.bookNav {
+    background-color: black;
+    border-bottom: 3px solid white;
+    max-height: 475px;
+}
+
+.bookNav a {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /*强制不换行 溢出部分省略 溢出部分加省略号*/
+}
+
+.bookNav a:hover {
+    color: #ff4400;
+}
+
+.bookNav a:visited {
+    color: white;
+}
+
+.bookNav ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bookNav li {
+    display: inline;
+}
+
+.bookNav li:hover {
+    border-bottom: 3px solid white;
+}
+
+.bookNavText {
+    text-align: center;
+}
+
+/* store.html结束 */
+/* bookdetail.html开始 */
+.gooddetailsimg img {
+    width: 100%;
+    ;
+}
+
+.bookDetailText {
+    margin: 0;
+    font-size: 18px;
+}
+
+.price {
+    color: red;
+    font-size: 25px;
+}
+
+.price span {
+    font-size: 18px;
+}
+
+.info-box {
+    border: 1px solid #ff4400;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* bookdetail.html结束 */
+/* cart.html开始 */
+.cart-product-image {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.totalPrice span {
+    color: red;
+}
+
+.totalPrice {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.cart-form-control {
+    width: 50px !important;
+}
+
+/* 隐藏单选按钮的默认外观 */
+.form-check-input {
+    position: absolute;
+    /* 绝对定位，使其脱离文档流 */
+    opacity: 0;
+    /* 透明度设为0，完全隐藏 */
+    cursor: pointer;
+    /* 鼠标悬停时显示手形图标 */
+    height: 0;
+    width: 0;
+}
+
+/* 未选中状态下的标签样式 */
+.form-check-label {
+    border: 2px solid #ccc;
+    /* 灰色边框 */
+    padding: 4px;
+    border-radius: 5px;
+    transition: border-color 0.15s ease-in-out;
+    cursor: pointer;
+    /* 鼠标悬停时显示手形图标 */
+    position: relative;
+    /* 相对定位，用于放置伪元素 */
+    display: inline-block;
+    margin-right: 10px;
+    /* 与其他选项标签之间的间距 */
+}
+
+/* 自定义选中状态的样式 */
+.form-check-input:checked+.form-check-label {
+    border-color: #ff4400;
+    /* Bootstrap 主题蓝色 */
+    background-color: #ff4400;
+    /* 蓝色背景 */
+    color: white;
+    /* 白色文字 */
+}
+
+/* 为了可访问性，当元素获得焦点时，添加轮廓 */
+.form-check-input:focus+.form-check-label {
+    outline: 2px solid blue;
+    outline-offset: 2px;
+}
+
+/* cart.html结束 */
+/* paid.html开始 */
+.loadingContainer {
+    width: 400px;
+    height: 300px;
+    /* 居中 */
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loadingContainer .loading {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: white;
+}
+
+/* 6个正方形 */
+.loading span {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: move 3.5s linear forwards;
+    /* 修改动画属性，使其只播放一遍 */
+}
+
+@keyframes move {
+    74% {
+        transform: rotate(600deg);
+    }
+
+    79% {
+        transform: rotate(720deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: rotate(720deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(810deg);
+        opacity: 0;
+    }
+}
+
+.loading span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.loading span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.loading span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.loading span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.loading span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.loading span::before {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 50%;
+    bottom: 0px;
+    left: calc(50% - 5px);
+}
+
+.paymentSuccess {
+    position: relative;
+    z-index: 1;
+    display: none;
+    text-align: center;
+}
+
+/* paid.html结束 */
+/* personCenter.html开始 */
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    font-size: 18px;
+}
+
+.profile-info .label {
+    font-weight: bold;
+}
+
+/* personCenter.html结束 */
+/* orderRecord.html开始 */
+.product-img {
+    width: 100px;
+    height: auto;
+}
+.tab-pane {
+    margin-top: 20px;
+}
+.nav-tabs a{
+    color: black;
+}
+.table{
+    vertical-align: middle;
+}
+/* orderRecord.html结束 */

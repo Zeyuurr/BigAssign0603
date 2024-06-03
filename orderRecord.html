@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+<body>
+    <!-- 头部导航栏 -->
+    <header>
+        <nav class="navbar navbar-expand-md bg-light navbar-light">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo"> Chen's
+                    <span>BookStore</span></a>
+                <!-- 汉堡菜单按钮 -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 导航栏按钮 -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i>主页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="store.html">书籍商店</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login.html" class="loginIcon nav-link"><i class="fa-solid fa-user"></i>登录/注册</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cart.html" class="loginIcon nav-link active"><i
+                                    class="fa-solid fa-cart-shopping"></i>购物车</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主体部分 -->
+    <main class="container mt-5">
+        <h2 class="mb-4">订单记录</h2>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#pendingPayment">待付款</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#pendingShipment">待发货</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#pendingReceipt">待收货</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#pendingReview">待评价</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#afterSales">售后退款</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane container active" id="pendingPayment">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>商品图片</th>
+                            <th>商品名称</th>
+                            <th>商品价格</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="tab-pane container fade" id="pendingShipment">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>商品图片</th>
+                            <th>商品名称</th>
+                            <th>商品价格</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="tab-pane container fade" id="pendingReceipt">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>商品图片</th>
+                            <th>商品名称</th>
+                            <th>商品价格</th>
+                            <th>物流状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                </table>
+            </div>
+            <div class="tab-pane container fade" id="pendingReview">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>商品图片</th>
+                            <th>商品名称</th>
+                            <th>商品价格</th>
+                            <th>评价状态</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="tab-pane container fade" id="afterSales">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>商品图片</th>
+                            <th>商品名称</th>
+                            <th>商品价格</th>
+                            <th>售后状态</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-10 me-auto mb-4">
+                    <h3 class="navbar-brand-text" href="#">Chen's
+                        <span>BookStore</span></a>
+                        <p class="copyright-text mt-lg-5 mb-4 mb-lg-0">版权所有 &copy; <a href="index.html"
+                                class="authot">2024 Chen's BookStore</a></p>
+                        <br>
+                        <p class="copyright-text">作者 <a href="#" target="_blank" class="authot">陈伟东,陈瑞祥,陈泽宇</a></p>
+                </div>
+
+                <div class="col-lg-5 col-8">
+                    <h5 class="text-white mb-3">链接</h5>
+
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">主页</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">链接2</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">链接3</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">链接4</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">链接5</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-4">
+                    <h5 class="text-white mb-3">社交媒体</h5>
+                    <ul class="social-icon">
+                        <li><a href="#" class="social-icon-link"><i class="fa-brands fa-youtube"></i></i></a></li>
+                        <li><a href="#" class="social-icon-link"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="#" class="social-icon-link"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" class="social-icon-link"><i class="fa-brands fa-skype"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/orderRecord.js"></script>
+
+</html>
